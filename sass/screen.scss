@@ -4,7 +4,7 @@
 
 body {
   font: 12px / 1.5 Georgia, Helvetica, Arial, sans-serif;
-  background: image-url("bg_dark.png");
+  background: url("../images/bg_dark.png");
   @include pie-clearfix;
 }
 
@@ -27,7 +27,7 @@ fieldset {
     overflow: auto;
     color: #999;
     font-size: 1em;
-    background: image-url("bg_dark.png");
+    background: url("../images/bg_dark.png");
   }
 }
 
