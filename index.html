@@ -1,85 +1,41 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset='utf-8'>
-
-  <title>DekusDenial/Compact-Markup-Evaluator @ GitHub</title>
-
-  <style type="text/css">
-    body {
-      margin-top: 1.0em;
-      background-color: #ddc0df;
-      font-family: Helvetica, Arial, FreeSans, san-serif;
-      color: #000000;
-    }
-    #container {
-      margin: 0 auto;
-      width: 700px;
-    }
-    h1 { font-size: 3.8em; color: #223f20; margin-bottom: 3px; }
-    h1 .small { font-size: 0.4em; }
-    h1 a { text-decoration: none }
-    h2 { font-size: 1.5em; color: #223f20; }
-    h3 { text-align: center; color: #223f20; }
-    a { color: #223f20; }
-    .description { font-size: 1.2em; margin-bottom: 30px; margin-top: 30px; font-style: italic;}
-    .download { float: right; }
-    pre { background: #000; color: #fff; padding: 15px;}
-    hr { border: 0; width: 80%; border-bottom: 1px solid #aaa}
-    .footer { text-align:center; padding-top:30px; font-style: italic; }
-  </style>
+  <meta http-equiv="content-type" content="text/html;charset=UTF-8">
+  <title>Compact Markup Evaluator</title>
+  <link href="stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
 </head>
-
-<body>
-  <a href="https://github.com/DekusDenial/Compact-Markup-Evaluator"><img style="position: absolute; top: 0; right: 0; border: 0;" src="http://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub" /></a>
-
-  <div id="container">
-
-    <div class="download">
-      <a href="https://github.com/DekusDenial/Compact-Markup-Evaluator/zipball/master">
-        <img border="0" width="90" src="https://github.com/images/modules/download/zip.png"></a>
-      <a href="https://github.com/DekusDenial/Compact-Markup-Evaluator/tarball/master">
-        <img border="0" width="90" src="https://github.com/images/modules/download/tar.png"></a>
-    </div>
-
-    <h1><a href="https://github.com/DekusDenial/Compact-Markup-Evaluator">Compact-Markup-Evaluator</a>
-      <span class="small">by <a href="https://github.com/DekusDenial">DekusDenial</a></span></h1>
-
-    <div class="description">
-      Place to test your HTML, CSS, and Javascript Code
-    </div>
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-      <h2>Contact</h2>
-      <p>Dekus (dekusdenial@hotmail.com)<br/>      </p>
-    
-
-    <h2>Download</h2>
-    <p>
-      You can download this project in either
-      <a href="https://github.com/DekusDenial/Compact-Markup-Evaluator/zipball/master">zip</a> or
-      <a href="https://github.com/DekusDenial/Compact-Markup-Evaluator/tarball/master">tar formats.
-    </p>
-    <p>You can also clone the project with <a href="http://git-scm.com">Git</a>
-      by running:
-      <pre>$ git clone git://github.com/DekusDenial/Compact-Markup-Evaluator</pre>
-    </p>
-
-    <div class="footer">
-      get the source code on GitHub : <a href="https://github.com/DekusDenial/Compact-Markup-Evaluator">DekusDenial/Compact-Markup-Evaluator</a>
-    </div>
-
+<body onload="prettyPrint()">
+  <div class="input">
+    <form>
+      <fieldset id="div_html">
+        <legend title="html">HTML</legend>
+        <textarea name="html" id="html" cols="30" rows="10" placeholder="Enter your HTML here..."></textarea>
+      </fieldset>
+      <fieldset id="div_css">
+        <legend title="css">CSS</legend>
+        <textarea name="css" id="css" cols="30" rows="10" placeholder="Enter your CSS here..."></textarea>
+      </fieldset>
+      <fieldset id="div_js">
+        <legend title="js">JavaScript</legend>
+        <textarea name="js" id="js" cols="30" rows="10" placeholder="Enter your JavaScript here..."></textarea>
+      </fieldset>
+      <p>
+        <label><input name="jslib" type="radio" value="jquery" checked="checked">jQuery</label>
+        <label><input name="jslib" type="radio" value="mootool">MooTool</label>
+      </p>
+    </form>
   </div>
-
+  <div class="output">
+    <fieldset>
+      <legend>Output View</legend>
+      <iframe id="output" frameborder="0"></iframe>
+    </fieldset>
+    
+  </div>
+  
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+  <script type="text/javascript" src="js/prettify.js"></script>
+  <script type="text/javascript" src="js/application.js"></script>
 </body>
 </html>
