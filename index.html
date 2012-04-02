@@ -23,6 +23,10 @@
       <p>
         <label><input name="jslib" type="radio" value="jquery" checked="checked">jQuery</label>
       </p>
+      <p >***if you want to run jQuery on the output view, you have to manually change the context to that output view, by adding "output_context" to any jQuery selector function !</p>
+      <pre class="prettyprint">// output_context is in global scope
+$('selector_from_the_output_view', output_context).hide();
+</pre>
     </form>
   </div>
   <div class="output">

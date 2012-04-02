@@ -5,7 +5,13 @@
 body {
   font: 12px / 1.5 Georgia, Helvetica, Arial, sans-serif;
   background: url("../images/bg_dark.png");
+  color: white;
   @include pie-clearfix;
+}
+
+.prettyprint {
+  background: #232323;
+  font-weight: bold;
 }
 
 fieldset {
