@@ -25,15 +25,14 @@
   }
 
   var $output = $('iframe#output'), inner = $output.contents();
-  var body = inner.find('body').css('background', 'white');
-  var styles = inner.find('head').append('<style>').children('style');
+  var body = inner.find('body');
+  var styles = inner.find('head').append('<style>').children('style').before('<style>body { background: white;}</style>');
   // make jQuery and its alias available to the iframe
   var $jslib = $('input:checked');
   if ($jslib && $jslib.val() == 'jquery') {
     $output[0].contentWindow.$ = $output[0].contentWindow.jQuery = window.top.$;
     window.output_context = $output[0].contentWindow.output_context = $output[0].contentWindow.document;
   }
-
 
     $('textarea').on('keyup', function() {
       var $area = $(this);
